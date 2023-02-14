@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script defer src="js/chartlogic.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            Data Reports
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <section class="tab-panel">
+                <div class="tab">
+                    <button class="tabmenu active" data-tab="tabpanel1">Install</button>
+                    <button class="tabmenu" data-tab="tabpanel2">ROI</button>
+                </div>
+
+                <div id="tabpanel1" class="tabpanel active">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
+                <div id="tabpanel2" class="tabpanel">
+                    <div>
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                </div>
+            </section>
+            <section class="table-ui">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th><button id="company">Company</button></th>
+                            <th><button id="country">Country</button></th>
+                            <th><button id="installs">Installs</button></th>
+                            <th><button id="roi">ROI</button></th>
+                            <th><button id="industryroi">Industry ROI</button></th>
+                        </tr>
+                        <tr>
+                            <th><input type="text" name="company"></th>
+                            <th><input type="text" name="country"></th>
+                            <th><input type="text" name="installs"></th>
+                            <th><input type="text" name="roi"></th>
+                            <th><input type="text" name="industryroi"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
