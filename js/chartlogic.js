@@ -114,6 +114,9 @@ const getTableContent = (data) => {
         tableContent.appendChild(row);
     });
 
+    userTyping = document.getElementsByClassName('typing')[0] ?? false;
+    userTyping.value = '';
+
     barChart.data.labels = getDataFromTable('label');
     barChart.data.datasets[0].data = getDataFromTable('installs');
     barChart.update();
@@ -160,11 +163,11 @@ const resetButtons = (event) => {
 
 window.addEventListener("load", () => {
     (async function () {
-        const companiesJSON = await getJsonDatafromAPI(location.href + 'api/companies.json').then(data => {
+        const companiesJSON = await getJsonDatafromAPI(location.href + 'api/companies.js').then(data => {
 
             data.map((company, index) => {
 
-                getJsonDatafromAPI(location.href + 'api/performance/countries/company_' + company.id + '.json').then(companydata => {
+                getJsonDatafromAPI(location.href + 'api/performance/countries/company_' + company.id + '.js').then(companydata => {
 
                     companydata.map((companyInsightsObj) => {
 
