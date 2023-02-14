@@ -163,11 +163,11 @@ const resetButtons = (event) => {
 
 window.addEventListener("load", () => {
     (async function () {
-        const companiesJSON = await getJsonDatafromAPI(location.href + 'api/companies.js').then(data => {
+        const companiesJSON = await getJsonDatafromAPI(location.href + 'js/companies.js').then(data => {
 
             data.map((company, index) => {
 
-                getJsonDatafromAPI(location.href + 'api/performance/countries/company_' + company.id + '.js').then(companydata => {
+                getJsonDatafromAPI(location.href + 'js/performance/countries/company_' + company.id + '.js').then(companydata => {
 
                     companydata.map((companyInsightsObj) => {
 
